@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CategoryService } from './category.service';
+import { Config } from './app.constants';
+import { Method } from './app.methods';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +18,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CategoryService,Config,Method],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
