@@ -18,7 +18,7 @@ export class DetailComponent implements OnInit {
 		this.categoryService
 		.getShow(+this.route.snapshot.params['id'])
 		.subscribe(data => {
-			this.category = data.json().data;
+			this.category = data.json().data.attributes;
 		},
 		error => {
 			console.log(error);

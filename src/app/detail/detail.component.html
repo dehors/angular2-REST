@@ -1,3 +1,16 @@
 <p>
-  Edit category
+	Edit category
 </p>
+<div *ngIf="category">
+	<h2>{{category.name}} details!</h2>
+	<div>
+		<label>id: </label>{{category.id}}
+	</div>
+	<div>
+		<label>name: </label>
+		<input [(ngModel)]="category.name" placeholder="name" />
+	</div>
+	<button (click)="update()">Save</button>
+</div>
+
+
