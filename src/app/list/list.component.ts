@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router }            from '@angular/router';
 
-import { CategoryService } from '../category.service';
+import { CategoryService }   from '../category.service';
+import { Category }          from '../category';
 
 @Component({
   selector: 'app-list',
@@ -10,7 +12,7 @@ import { CategoryService } from '../category.service';
 export class ListComponent implements OnInit {
   title = 'Lista de categorias';
   categories: string[] = [];
-  constructor(private categoryService : CategoryService) { }
+  constructor(private categoryService : CategoryService,private router: Router) { }
 
   ngOnInit(): void {
     this.categoryService
@@ -27,6 +29,11 @@ export class ListComponent implements OnInit {
         // No errors, route to new page here
       }
     );
+  }
+
+  onSelect(category: Category){
+    this.router.navigate(['/list', category.id]);
+    console.log(category);
   }
 
 }

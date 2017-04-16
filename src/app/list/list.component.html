@@ -1,6 +1,6 @@
 <div class="col-md-6">
-	<div class="list-group" *ngFor="let category of categories">
-		<a href="#" class="list-group-item">
+	<div class="list-group" *ngFor="let category of categories" (click)="onSelect(category.attributes)">
+		<a class="list-group-item">
 			<h4 class="list-group-item-heading">id: {{category.attributes.id}} - <strong>{{category.attributes.name}}</strong></h4>
 			<p class="list-group-item-text">{{ category.attributes.description }}</p>
 		</a>
