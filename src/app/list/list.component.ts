@@ -33,7 +33,6 @@ export class ListComponent implements OnInit {
 
   onSelect(category: Category){
     this.router.navigate(['/list', category.id]);
-    console.log(category);
   }
 
 }
