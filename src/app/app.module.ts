@@ -7,16 +7,26 @@ import { AppComponent } from './app.component';
 import { CategoryService } from './category.service';
 import { Config } from './app.constants';
 import { Method } from './app.methods';
+import { AppRoutingModule } from './app-routing.module';
+import { ErrorComponent } from './error/error.component';
+import { ListComponent } from './list/list.component';
+import { HomeComponent } from './home/home.component';
+import { DetailComponent } from './detail/detail.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorComponent,
+    ListComponent,
+    HomeComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [CategoryService,Config,Method],
   bootstrap: [AppComponent]

@@ -1,15 +1,6 @@
-<h1>
-  {{title}}
-</h1>
-<div class="col-md-6">
-
-</div>
-<div class="col-md-6">
-    <div class="list-group" *ngFor="let category of categories">
-      <a href="#" class="list-group-item">
-        <h4 class="list-group-item-heading">id: {{category.attributes.id}} - <strong>{{category.attributes.name}}</strong></h4>
-        <p class="list-group-item-text">{{ category.attributes.description }}</p>
-      </a>
-    </div>
-       
-</div>
+<h1>{{title}}</h1>
+<nav>
+	<a routerLink="/" routerLinkActive="active">Inicio</a><strong>&nbsp;/&nbsp;</strong>
+	<a routerLink="/list" routerLinkActive="active">Lista</a>
+</nav>
+<router-outlet></router-outlet>
