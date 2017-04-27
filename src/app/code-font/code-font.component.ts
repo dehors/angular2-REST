@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./code-font.component.css']
 })
 export class CodeFontComponent implements OnInit {
-
+  title = "List of costumers";
+  costumers = ["Juan","Pedro","Maria","Alejandro"];
   constructor() { }
 
   ngOnInit() {

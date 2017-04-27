@@ -1,3 +1,4 @@
-<p>
-  code-font works!
-</p>
+<h1>{{ title }}</h1>
+<ul *ngFor = "let costumer of costumers; let i = index">
+	<li>{{ i }} - {{ costumer }}</li>
+</ul>
