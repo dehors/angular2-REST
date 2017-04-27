@@ -12,7 +12,7 @@ import { ErrorComponent } from './error/error.component';
 import { ListComponent } from './list/list.component';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
-
+import { SaveComponent } from './save/save.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { DetailComponent } from './detail/detail.component';
     ErrorComponent,
     ListComponent,
     HomeComponent,
-    DetailComponent
+    DetailComponent,
+    SaveComponent
   ],
   imports: [
     BrowserModule,

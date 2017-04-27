@@ -12,6 +12,8 @@ import { Category }          from '../category';
 
 export class DetailComponent implements OnInit {
 	category: Category;
+	errorsArray: string[] = [];
+
 	constructor(private categoryService : CategoryService,private route: ActivatedRoute) { }
 
 	ngOnInit(): void {
@@ -29,7 +31,23 @@ export class DetailComponent implements OnInit {
 			// No errors, route to new page here
 		}
 		);
-		console.log();
+	}
+
+	update(category: Category){
+		this.categoryService
+		.update(category)
+		.subscribe(data => {
+			console.log(data.json());
+		},
+		error => {
+			this.errorsArray = error.json();
+		},
+		() => {
+			console.log('success');
+			// 'onCompleted' callback.
+			// No errors, route to new page here
+		}
+		);
 	}
 
 }

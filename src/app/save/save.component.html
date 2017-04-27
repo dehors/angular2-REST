@@ -1,11 +1,8 @@
+
 <p>
-	Edit category
+	Create category
 </p>
-<div *ngIf="category">
-	<h2>{{category.name}} details!</h2>
-	<div>
-		<label>id: </label>{{category.id}}
-	</div>
+<div>
 	<div>
 		<label>Name: </label>
 		<input [(ngModel)]="category.name" placeholder="Name..." />
@@ -14,7 +11,7 @@
 		<input [(ngModel)]="category.description" placeholder="Description..." />
 		<p class="errorShow">{{ errorsArray.description }}</p>
 	</div>
-	<button (click)="update(category)">Save</button>
+	<button (click)="save(category)">Save</button>
 </div>
 
 
