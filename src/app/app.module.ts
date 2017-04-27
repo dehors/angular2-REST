@@ -13,6 +13,7 @@ import { ListComponent } from './list/list.component';
 import { HomeComponent } from './home/home.component';
 import { DetailComponent } from './detail/detail.component';
 import { SaveComponent } from './save/save.component';
+import { CodeFontComponent } from './code-font/code-font.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SaveComponent } from './save/save.component';
     ListComponent,
     HomeComponent,
     DetailComponent,
-    SaveComponent
+    SaveComponent,
+    CodeFontComponent
   ],
   imports: [
     BrowserModule,
