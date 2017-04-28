@@ -2,3 +2,33 @@
 <ul *ngFor = "let costumer of costumers; let i = index">
 	<li>{{ i }} - {{ costumer }}</li>
 </ul>
+<div *ngIf="condition">
+	Mensaje
+</div>
+<div template="ngIf condition">
+	Mensaje
+</div>
+
+<div *ngFor="let costumer of costumers; let i = index; let p = odd">
+	<li *ngIf="p">
+		{{ i }} - {{ costumer }}
+	</li>
+</div>
+
+<div *ngFor="let costumer of costumers; let i = index; let p = even">
+	<li *ngIf="p">
+		{{ i }} - {{ costumer }}
+	</li>
+</div>
+
+<div *ngFor="let costumer of costumers; let i = index; let p = first">
+	<li *ngIf="p">
+		{{ i }} - {{ costumer }}
+	</li>
+</div>
+
+<div *ngFor="let costumer of costumers; let i = index; let p = last">
+	<li *ngIf="p">
+		{{ i }} - {{ costumer }}
+	</li>
+</div>
