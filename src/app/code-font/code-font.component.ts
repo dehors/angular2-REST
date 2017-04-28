@@ -15,4 +15,8 @@ export class CodeFontComponent implements OnInit {
   ngOnInit() {
   }
 
+  Sum(){
+  	this.name = this.name+' Carrillo'
+  }
+
 }
