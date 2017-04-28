@@ -34,6 +34,8 @@
 </div>
 
 {{ name }}
-<input type="text" [(ngModel)]="name">
+<input type="text" [(ngModel)]="name" #cli (keyup)="onkeyup(cli.value)">
+<br>
+{{ cli.value }}
 <br>
 <button (click)="Sum()">Sumar</button>

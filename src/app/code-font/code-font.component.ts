@@ -19,4 +19,8 @@ export class CodeFontComponent implements OnInit {
   	this.name = this.name+' Carrillo'
   }
 
+  onkeyup(value){
+  	console.log(value);
+  }
+
 }
